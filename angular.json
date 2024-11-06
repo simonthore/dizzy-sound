@@ -25,12 +25,18 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "less",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+          "assets": [
+        {
+      "glob": "**/*",
+      "input": "src/assets",
+      "output": "/assets"
+        },
+    {
+      "glob": "**/*",
+      "input": "public",
+      "output": "/public"
+    }
+  ],  
             "styles": [
               "src/styles.less"
             ],
@@ -98,5 +104,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "df195a35-29aa-430b-a634-ab21f3bda6ce"
   }
 }
