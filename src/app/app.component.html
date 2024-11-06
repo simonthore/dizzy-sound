@@ -9,9 +9,23 @@
 
 <style></style>
 
+<app-header></app-header>
 <main class="main">
-  <app-header></app-header>
-  <div class="content"></div>
+  <section id="home">
+    <app-home></app-home>
+  </section>
+
+  <section id="events">
+    <app-events></app-events>
+  </section>
+
+  <section id="contact">
+    <app-contact></app-contact>
+  </section>
+
+  <section id="artists">
+    <app-artists></app-artists>
+  </section>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -21,5 +35,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet />
