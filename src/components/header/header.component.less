@@ -3,11 +3,13 @@ nav {
   top: 0;
   z-index: 1000; /* Assure que le header reste au-dessus des autres contenus */
   background-color: rgba(255, 255, 255, 0.8); /* Optionnel, pour un fond blanc */
+  // background-color: #D9DACE;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Une ombre légère pour le header */
-  padding: 10px 0; /* Un peu de marge autour */
+  // padding: 10px 0; /* Un peu de marge autour */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // margin-bottom: 500px;
 }
 
 nav ul {
@@ -23,9 +25,17 @@ nav ul {
     font-size: 1.2em;
     font-family: Kodo;
   }
+  nav ul li a {
+    display: inline-block; /* Ajout de display: inline-block */
+    transition: transform 0.4s ease; /* Transition pour l'effet smooth */
+  }
+  
+  nav ul li a:hover {
+    transform: scale(1.2);
+  }
   
   nav ul li a.active {
-    color: blue;
+    color: red; /* Couleur rouge pour le lien actif */
   }
   #logo {
     width: 75px;
@@ -38,4 +48,12 @@ nav ul {
     margin: 0;
     margin-right: 500px;
     color: black;
+  }
+  .social_media{
+    width: 40px;
+    height: 40px;
+  }
+  .social_media:hover{
+    transform: scale(1.2);
+    cursor: pointer;
   }

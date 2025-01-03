@@ -1,2 +1,24 @@
-<p>home works! vive dizzy sound</p>
-<p>toto</p>
+<p-carousel
+  [value]="videos"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  [responsiveOptions]="responsiveOptions"
+  class="custom-carousel"
+>
+  <ng-template let-video pTemplate="item">
+    <div class="media-player-container">
+      <!-- Video Section -->
+      <div class="video-wrapper">
+        <iframe
+          class="video-iframe"
+          [src]="getSafeUrl(video.url)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <!-- Video Title -->
+    </div>
+  </ng-template>
+</p-carousel>

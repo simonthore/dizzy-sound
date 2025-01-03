@@ -1,0 +1,110 @@
+/* Carousel Styling */
+.custom-carousel ::ng-deep .p-carousel-content {
+    display: flex;
+    justify-content: center;
+    background: transparent; /* Light grey background */
+    padding: 1rem 0;
+    border-radius: 10px;
+    margin-top: 40px;
+    
+  }
+  
+  .custom-carousel ::ng-deep .p-carousel-item {
+    border-radius: 12px;
+    
+  }
+  
+  .custom-carousel ::ng-deep .p-carousel-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Media Player Container */
+  .media-player-container {
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: stretch;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Video Wrapper */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #000; /* Black background for the video */
+  }
+  
+  .video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+
+
+
+/* Styling for the previous and next buttons */
+.custom-carousel ::ng-deep .p-carousel-prev,
+.custom-carousel ::ng-deep .p-carousel-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Fixed size */
+  height: 50px;
+  background-color: rgba(22, 18, 43, 0.3);/* Primary blue color */
+  color: white; /* White icon */
+  border: none;
+  border-radius: 25%; /* Circular shape */
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.custom-carousel ::ng-deep .p-carousel-prev:hover,
+.custom-carousel ::ng-deep .p-carousel-next:hover {
+  background-color: rgb(22, 18, 43); /* Darker blue for hover */
+  transform: scale(1.1); /* Slight zoom effect */
+ 
+}
+
+/* Active state */
+.custom-carousel ::ng-deep .p-carousel-prev:active,
+.custom-carousel ::ng-deep .p-carousel-next:active {
+  background-color: #004085; /* Even darker for active */
+  transform: scale(1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons inside the buttons */
+.custom-carousel ::ng-deep .p-carousel-prev::before,
+.custom-carousel ::ng-deep .p-carousel-next::before {
+  font-size: 1.5rem; /* Size of the icon */
+}
+/* Pagination Styling */
+.custom-carousel ::ng-deep .p-carousel-indicators {
+  visibility: hidden; /* Hide the default indicators */
+  }
+  
+  .custom-carousel {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+  }
+  
+/* Cacher la barre de défilement */
+.custom-carousel ::-webkit-scrollbar {
+    display: none; /* Cacher la barre de défilement pour les navigateurs basés sur WebKit */
+  }
+  
+  /* Désactiver le défilement sur les enfants */
+  .custom-carousel ::ng-deep .p-carousel-content {
+    overflow: hidden; /* Supprime les dépassements */
+  }
