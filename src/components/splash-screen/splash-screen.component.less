@@ -1,0 +1,37 @@
+.splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black; /* Fond noir */
+    overflow: hidden; /* Cache les barres de défilement */
+    position: fixed; /* Permet de garder l'écran splash en place */
+    top: 0;
+    left: 0;
+  }
+  
+  .splash-text {
+    font-size: 14rem;
+    font-weight: bold;
+    color: transparent;
+    display: flex;
+    gap: 0.2rem;
+    background-image: url('../../assets/test.jpg');
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeOut 4s ease forwards 3s;
+  }
+  
+  
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  

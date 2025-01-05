@@ -1,0 +1,55 @@
+.card {
+    width: 400px;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* Empêche le dépassement du contenu */
+    cursor: pointer;
+  }
+  
+  .card .img-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+  
+  .card .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adapte l'image à la carte */
+    border-radius: inherit;
+    transition: 0.5s ease-in-out; /* Animation fluide sur hover */
+  }
+  
+  .card .content {
+    position: absolute;
+    inset: 10px; /* Laisse un espace entre le contenu et les bords */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent noir */
+    color: white; /* Texte en blanc */
+    border: 2px solid white; /* Bordure blanche */
+    border-radius: inherit;
+    opacity: 0; /* Cacher par défaut */
+    transition: 0.4s ease-in-out; /* Animation fluide */
+    text-align: center; /* Centrer le texte */
+    padding: 1rem; /* Ajoute un espace intérieur autour du texte */
+  }
+  
+  .card:hover .content {
+    opacity: 1; /* Afficher au survol */
+  }
+  
+  .card .content h2 {
+    margin: 0;
+    font-size: 1.5rem; /* Taille du titre */
+  }
+  
+  .card .content p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem; /* Taille du texte */
+    line-height: 1.4;
+  }
+  
