@@ -1,59 +1,112 @@
 nav {
   position: sticky;
   top: 0;
-  z-index: 1000; /* Assure que le header reste au-dessus des autres contenus */
-  background-color: rgba(255, 255, 255, 0.8); /* Optionnel, pour un fond blanc */
-  // background-color: #D9DACE;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Une ombre légère pour le header */
-  // padding: 10px 0; /* Un peu de marge autour */
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // margin-bottom: 500px;
+  padding: 10px 20px; /* Ajout de padding pour l'espacement */
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 50px;
+  list-style-type: none;
+  display: flex;
+  gap: 20px; /* Réduction de l'écart entre les éléments */
+  flex-wrap: wrap; /* Permet aux éléments de se plier sur plusieurs lignes si nécessaire */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  text-align: center; /* Centrer les éléments pour plus d'harmonie */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1em; /* Taille plus petite pour les petits écrans */
+  font-family: Kodo;
+  transition: transform 0.4s ease;
+}
+
+#logo {
+  width: 60px; /* Réduction de la taille pour les petits écrans */
+  height: 60px;
+  margin-right: 10px;
+}
+
+h4 {
+  font-family: Jungle street;
+  font-size: 2em; /* Taille plus petite pour les petits écrans */
+  margin: 0;
+  margin-right: 50px;
+  color: black;
+}
+
+.social_media {
+  width: 30px; /* Taille plus petite pour les icônes sur petits écrans */
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social_media:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Media Queries pour petits écrans */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column; /* Les éléments sont empilés verticalement */
+    align-items: flex-start; /* Alignement à gauche */
   }
-  
+
+  nav ul {
+    flex-direction: column; /* Les liens sont empilés verticalement */
+    gap: 25px; /* Espacement réduit entre les éléments */
+  }
+
   nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.2em;
-    font-family: Kodo;
+    font-size: 0.9em; /* Texte légèrement plus petit */
   }
-  nav ul li a {
-    display: inline-block; /* Ajout de display: inline-block */
-    transition: transform 0.4s ease; /* Transition pour l'effet smooth */
-  }
-  
-  nav ul li a:hover {
-    transform: scale(1.2);
-  }
-  
-  nav ul li a.active {
-    color: red; /* Couleur rouge pour le lien actif */
-  }
-  #logo {
-    width: 75px;
-    height: 75px;
-    margin-right: 10px;
-  }
+
   h4 {
-    font-family: Jungle street;
-    font-size: 2.5em;
-    margin: 0;
-    margin-right: 500px;
-    color: black;
+    font-size: 1.8em; /* Ajuste la taille du titre */
   }
-  .social_media{
-    width: 40px;
-    height: 40px;
+
+  #logo {
+    width: 50px;
+    height: 50px;
   }
-  .social_media:hover{
-    transform: scale(1.2);
-    cursor: pointer;
+
+  .social_media {
+    width: 25px; /* Taille réduite des icônes */
+    height: 25px;
   }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px; /* Réduction du padding */
+  }
+
+  h4 {
+    font-size: 1.5em; /* Réduction du titre */
+  }
+
+  nav ul {
+    gap: 5px; /* Espacement minimum entre les éléments */
+  }
+
+  nav ul li a {
+    font-size: 0.8em; /* Texte encore plus petit pour très petits écrans */
+  }
+
+  .social_media {
+    width: 20px; /* Réduction supplémentaire des icônes */
+    height: 20px;
+  }
+}
