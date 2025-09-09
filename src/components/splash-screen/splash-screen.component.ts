@@ -3,8 +3,9 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-splash-screen',
+  standalone: true,
   templateUrl: './splash-screen.component.html',
-  styleUrls: ['./splash-screen.component.less']
+  styleUrls: ['./splash-screen.component.less'],
 })
 export class SplashScreenComponent implements OnInit {
 

@@ -8,7 +8,7 @@ import { SplashScreenComponent } from '../components/splash-screen/splash-screen
 
 export const routes: Routes = [
 
-    { path: '', redirectTo: '/splash-screen', pathMatch: 'full' },  // Redirection initiale vers l'écran de présentation
+    { path: '', redirectTo: '/splash-screen', pathMatch: 'full' },  
     { path: 'splash-screen', component: SplashScreenComponent },
     { path: 'home', component: HomeComponent },
     { path: 'header', component: HeaderComponent },
